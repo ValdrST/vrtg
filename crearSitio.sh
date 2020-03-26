@@ -35,8 +35,8 @@ fi
 
 cp vrtgd.service /etc/systemd/system/
 systemctl daemon-reload
-sudo systemctl start ws-reportes
-sudo systemctl enable ws-reportes
+sudo systemctl start vrtgd
+sudo systemctl enable vrtgd
 
 # Solicita Directorio para nuevo sitio
 echo "***********************************"
