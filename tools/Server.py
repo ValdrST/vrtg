@@ -10,6 +10,6 @@ class Server():
         self.app = Flask(name)
         self.app.register_blueprint(server_report)
 
-@server_report.route('/',methods=['GET'])
+@server_report.route('/vrtg',methods=['GET'])
 def index():
     return "<h1>VRTG</h1>"

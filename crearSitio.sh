@@ -55,7 +55,7 @@ rm -rf $directorioSitioNGINX
         listen $numeroPuerto;
         server_name $ip;
         location /vrtg {
-            proxy_pass http://unix:/run/waitress/ws-reportes.sock;
+            proxy_pass http://unix:/run/waitress/vrtg.sock;
         }
 
 }" > $archivoConfiguracionNGINX
