@@ -3,7 +3,7 @@
 # Solicita la IP
 echo "Indique el número de servidor:"
 echo "1. venganzaiii.somch.org"
-echo "3. somch.org"
+echo "2. somch.org"
 read numeroServidor
 # Determina si el Servidor es válido
 case ${numeroServidor} in
@@ -64,7 +64,7 @@ rm -rf $directorioSitioNGINX
 
 	# Crea el enlace simbolico
 	sitesEnabledConfig="/etc/nginx/sites-enabled/$nombreDirectorio-proxy.conf"
-	if [-d $sitesEnabledConfig ];then
+	if [ -d $sitesEnabledConfig ];then
 		rm $sitesEnabledConfig
 	fi
 	sitesAvailableConfig="/etc/nginx/sites-available/$nombreDirectorio-proxy.conf"
