@@ -55,8 +55,9 @@ rm -rf $directorioSitioNGINX
         listen $numeroPuerto;
         server_name $ip;
         location /vrtg {
-            proxy_pass unix:/run/waitress/vrtg.sock;
+            proxy_pass http://unix:/run/waitress/ws-reportes.sock;
         }
+
 }" > $archivoConfiguracionNGINX
 
 	# Crea la carpeta de trabajo de NGINX
