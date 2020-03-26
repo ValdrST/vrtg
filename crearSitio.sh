@@ -54,7 +54,7 @@ rm -rf $directorioSitioNGINX
 	echo "server{
         listen $numeroPuerto;
         server_name $ip;
-        location / {
+        location /vrtg {
             proxy_pass unix:/run/waitress/vrtg.sock;
         }
 }" > $archivoConfiguracionNGINX
@@ -68,7 +68,7 @@ rm -rf $directorioSitioNGINX
 		rm $sitesEnabledConfig
 	fi
 	sitesAvailableConfig="/etc/nginx/sites-available/$nombreDirectorio-proxy.conf"
-	if
+	
 	ln -s $sitesAvailableConfig $sitesEnabledConfig
 
 	# Ajusta permisos
